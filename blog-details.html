@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Details - The Heritage Museum</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -132,11 +133,9 @@
                 </svg>
                 Back to Blog
             </a>
-            <h1 class="text-5xl font-bold mb-4 section-reveal"
-                style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Uncovering Ancient Secrets:
-                New Discoveries in Mesopotamia</h1>
-            <p class="text-xl section-reveal" style="color: var(--text-secondary);">January 10, 2024 • By Dr. Sarah
-                Johnson</p>
+            <h1 id="blog-title" class="text-5xl font-bold mb-4 section-reveal"
+                style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Loading...</h1>
+            <p id="blog-date" class="text-xl section-reveal" style="color: var(--text-secondary);">Loading...</p>
         </div>
     </section>
 
@@ -144,36 +143,10 @@
         <div class="container-custom mx-auto px-4">
             <div class="max-w-3xl mx-auto">
                 <div class="mb-8 overflow-hidden rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&q=80"
-                        alt="Blog Post Image" class="w-full h-96 object-cover">
+                    <img id="blog-image" src="" alt="Blog Post Image" class="w-full h-96 object-cover">
                 </div>
-                <div class="prose prose-lg max-w-none" style="color: var(--text-secondary);">
-                    <p class="mb-4">Recent archaeological findings in the Fertile Crescent have revealed fascinating new
-                        insights into early human civilization. These discoveries challenge our understanding of how
-                        ancient societies developed and interacted.</p>
-                    <p class="mb-4">The excavation site, located near the ancient city of Ur, has yielded artifacts
-                        dating back over 5,000 years. Among the most significant finds are cuneiform tablets that
-                        provide detailed records of daily life, trade, and governance in early Mesopotamia.</p>
-                    <h2 class="text-3xl mb-4 mt-8"
-                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">The Significance of
-                        Cuneiform</h2>
-                    <p class="mb-4">Cuneiform writing, one of the earliest forms of written communication, represents a
-                        revolutionary development in human history. These clay tablets preserve information that would
-                        otherwise be lost to time, offering us a direct window into the thoughts and concerns of people
-                        who lived millennia ago.</p>
-                    <p class="mb-4">The newly discovered tablets include administrative records, legal documents, and
-                        even personal letters. This diversity of content helps us understand not just the political and
-                        economic structures of ancient Mesopotamia, but also the social and cultural aspects of daily
-                        life.</p>
-                    <h2 class="text-3xl mb-4 mt-8"
-                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Implications for
-                        Historical Understanding</h2>
-                    <p class="mb-4">These discoveries have significant implications for our understanding of early
-                        civilization. They suggest that complex social structures and administrative systems developed
-                        earlier than previously thought, and that trade networks extended further than archaeological
-                        evidence had previously indicated.</p>
-                    <p>As we continue to analyze these artifacts, we expect to uncover even more about how these ancient
-                        societies functioned and how they laid the groundwork for the civilizations that followed.</p>
+                <div id="blog-content" class="prose prose-lg max-w-none" style="color: var(--text-secondary);">
+                    <p>Loading content...</p>
                 </div>
             </div>
         </div>
@@ -192,7 +165,7 @@
                     </div>
                     <p class="mb-4" style="color: var(--text-secondary);">Preserving and showcasing world and regional
                         history through curated exhibitions and collections.</p>
-                    <p class="text-sm" style="color: var(--text-secondary);">© 2024 The Heritage Museum. All rights
+                    <p class="text-sm" style="color: var(--text-secondary);">© 2026 The Heritage Museum. All rights
                         reserved.</p>
                 </div>
                 <div>
@@ -258,6 +231,7 @@
 
     <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/blog-content.js"></script>
     <script>
         const mobileThemeToggle = document.getElementById('theme-toggle-mobile');
         const desktopThemeToggle = document.getElementById('theme-toggle');

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exhibition Details - The Heritage Museum</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -132,51 +133,28 @@
                 </svg>
                 Back to Exhibitions
             </a>
-            <h1 class="text-5xl font-bold mb-4 section-reveal"
-                style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Ancient Civilizations</h1>
-            <p class="text-xl section-reveal" style="color: var(--text-secondary);">Current Exhibition • Through March
-                2024</p>
+            <h1 id="exhibition-title" class="text-5xl font-bold mb-4 section-reveal"
+                style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Loading...</h1>
+            <p class="text-xl section-reveal" style="color: var(--text-secondary);">
+                <span id="exhibition-status">Loading...</span> • <span id="exhibition-duration">Loading...</span>
+            </p>
         </div>
     </section>
 
     <section class="py-20 bg-[var(--bg-surface)]">
         <div class="container-custom mx-auto px-4">
             <div class="mb-8 overflow-hidden rounded-lg">
-                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&q=80"
-                    alt="Ancient Civilizations Exhibition" class="w-full h-96 object-cover">
+                <img id="exhibition-image" src="" alt="Exhibition Image" class="w-full h-96 object-cover">
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 <div class="lg:col-span-2">
                     <h2 class="text-3xl mb-6"
                         style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">About This
                         Exhibition</h2>
-                    <p class="mb-4" style="color: var(--text-secondary);">Journey through the ancient world and discover
-                        the foundations of human civilization. This comprehensive exhibition brings together artifacts,
-                        documents, and artworks from ancient Egypt, Mesopotamia, Greece, Rome, and beyond.</p>
-                    <p class="mb-4" style="color: var(--text-secondary);">Explore how these early civilizations
-                        developed writing systems, built monumental architecture, established legal codes, and created
-                        art that continues to inspire us today. The exhibition features over 200 objects, many never
-                        before displayed publicly.</p>
-                    <h3 class="text-2xl mb-4 mt-8"
-                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Highlights</h3>
-                    <ul class="space-y-2 mb-6" style="color: var(--text-secondary);">
-                        <li class="flex items-start">
-                            <span class="mr-2" style="color: var(--accent);">•</span>
-                            <span>Rare cuneiform tablets from ancient Mesopotamia</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2" style="color: var(--accent);">•</span>
-                            <span>Egyptian funerary artifacts and hieroglyphic inscriptions</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2" style="color: var(--accent);">•</span>
-                            <span>Greek pottery and sculpture from the Classical period</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2" style="color: var(--accent);">•</span>
-                            <span>Roman coins, jewelry, and architectural fragments</span>
-                        </li>
-                    </ul>
+                    <p id="exhibition-description" class="mb-4" style="color: var(--text-secondary);">Loading...</p>
+                    <div id="exhibition-content" style="color: var(--text-secondary);">
+                        <p>Loading content...</p>
+                    </div>
                 </div>
                 <div>
                     <div class="card">
@@ -219,7 +197,7 @@
                     </div>
                     <p class="mb-4" style="color: var(--text-secondary);">Preserving and showcasing world and regional
                         history through curated exhibitions and collections.</p>
-                    <p class="text-sm" style="color: var(--text-secondary);">© 2024 The Heritage Museum. All rights
+                    <p class="text-sm" style="color: var(--text-secondary);">© 2026 The Heritage Museum. All rights
                         reserved.</p>
                 </div>
                 <div>
@@ -285,6 +263,7 @@
 
     <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/exhibition-content.js"></script>
     <script>
         const mobileThemeToggle = document.getElementById('theme-toggle-mobile');
         const desktopThemeToggle = document.getElementById('theme-toggle');

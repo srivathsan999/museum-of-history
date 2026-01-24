@@ -1,0 +1,23 @@
+/* Tailwind CSS CDN will be loaded in HTML */
+/* This file is for any custom Tailwind overrides */
+
+/* Container */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsive Utilities */
+@media (min-width: 640px) {
+  .container-custom {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding: 0 2rem;
+  }
+}
+

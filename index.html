@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - The Heritage Museum</title>
+    <meta name="description" content="The Heritage Museum - Explore world and regional history exhibitions">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'museum-bg': '#F4F1EC',
+                        'museum-surface': '#FFFFFF',
+                        'museum-text': '#1F1F1F',
+                        'museum-text-secondary': '#5B5B5B',
+                        'museum-accent': '#8C6A3D',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="page-enter">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 navbar-glass transition-all duration-300">
+        <div class="container-custom mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-[var(--accent)] rounded-lg flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold text-xl">H</span>
+                    </div>
+                    <span class="text-xl font-bold"
+                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary); white-space: nowrap;">The
+                        Heritage Museum</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <div class="relative">
+                        <button id="dropdown-toggle" class="nav-link flex items-center space-x-1"
+                            style="color: var(--text-primary); font-weight: 500;">
+                            <span>Home</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="dropdown-menu"
+                            class="hidden absolute top-full left-0 mt-2 w-48 bg-[var(--bg-surface)] border border-[var(--border)] rounded-lg shadow-lg py-2">
+                            <a href="index.html" class="block px-4 py-2 hover:bg-[var(--bg-primary)]"
+                                style="color: var(--text-primary);">Home 1</a>
+                            <a href="home-2.html" class="block px-4 py-2 hover:bg-[var(--bg-primary)]"
+                                style="color: var(--text-primary);">Home 2</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="nav-link"
+                        style="color: var(--text-primary); font-weight: 500;">About</a>
+                    <a href="exhibitions.html" class="nav-link"
+                        style="color: var(--text-primary); font-weight: 500;">Exhibitions</a>
+
+                    <a href="events.html" class="nav-link"
+                        style="color: var(--text-primary); font-weight: 500;">Events</a>
+                    <a href="visit.html" class="nav-link"
+                        style="color: var(--text-primary); font-weight: 500;">Visit</a>
+                    <a href="blog.html" class="nav-link" style="color: var(--text-primary); font-weight: 500;">Blog</a>
+                    <a href="contact.html" class="nav-link"
+                        style="color: var(--text-primary); font-weight: 500;">Contact</a>
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary" style="white-space: nowrap;">Sign Up</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-[var(--bg-primary)] transition-colors"
+                        aria-label="Toggle theme">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            style="color: var(--text-primary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-[var(--bg-primary)]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        style="color: var(--text-primary);">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <div class="relative">
+                        <button
+                            class="w-full text-left px-4 py-2 rounded-lg hover:bg-[var(--bg-primary)] flex items-center justify-between"
+                            style="color: var(--text-primary); font-weight: 500;">
+                            <span>Home</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="pl-4 mt-2 space-y-1">
+                            <a href="index.html" class="block px-4 py-2 rounded-lg hover:bg-[var(--bg-primary)]"
+                                style="color: var(--text-secondary);">Home 1</a>
+                            <a href="home-2.html" class="block px-4 py-2 rounded-lg hover:bg-[var(--bg-primary)]"
+                                style="color: var(--text-secondary);">Home 2</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-primary)]"
+                        style="color: var(--text-primary); font-weight: 500;">About</a>
+                    <a href="exhibitions.html" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-primary)]"
+                        style="color: var(--text-primary); font-weight: 500;">Exhibitions</a>
+
+                    <a href="events.html" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-primary)]"
+                        style="color: var(--text-primary); font-weight: 500;">Events</a>
+                    <a href="visit.html" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-primary)]"
+                        style="color: var(--text-primary); font-weight: 500;">Visit</a>
+                    <a href="blog.html" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-primary)]"
+                        style="color: var(--text-primary); font-weight: 500;">Blog</a>
+                    <a href="contact.html" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-primary)]"
+                        style="color: var(--text-primary); font-weight: 500;">Contact</a>
+                    <a href="login.html" class="btn btn-outline mx-4 my-2">Login</a>
+                    <a href="signup.html" class="btn btn-primary mx-4 my-2" style="white-space: nowrap;">Sign Up</a>
+                    <button id="theme-toggle-mobile"
+                        class="w-full text-left px-4 py-2 rounded-lg hover:bg-[var(--bg-primary)] flex items-center space-x-2"
+                        style="color: var(--text-primary); font-weight: 500;">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                        <span>Toggle Theme</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center image-overlay"
+        style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&q=80') center/cover;">
+        <div class="container-custom mx-auto px-4 text-center text-white section-reveal">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6" style="font-family: 'Libre Baskerville', serif;">Welcome to
+                The Heritage Museum</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Discover the rich tapestry of world and regional
+                history through our curated exhibitions</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="exhibitions.html" class="btn btn-primary inline-block">Explore Exhibitions</a>
+                <a href="visit.html"
+                    class="btn btn-outline inline-block text-white border-white hover:bg-white hover:text-gray-900">Plan
+                    Your Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Exhibitions -->
+    <section class="py-20 bg-[var(--bg-primary)]">
+        <div class="container-custom mx-auto px-4">
+            <div class="text-center mb-12 section-reveal">
+                <h2 class="text-4xl mb-4" style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">
+                    Featured Exhibitions</h2>
+                <p class="text-lg" style="color: var(--text-secondary);">Explore our current and upcoming exhibitions
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card stagger-item hover-shadow">
+                    <div class="mb-4 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80"
+                            alt="Ancient Civilizations" class="w-full h-64 object-cover">
+                    </div>
+                    <h3 class="text-2xl mb-2"
+                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Ancient
+                        Civilizations</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Journey through the ancient world and
+                        discover the foundations of human civilization.</p>
+                    <a href="exhibition-details.html" class="hover-underline" style="color: var(--accent);">Learn More
+                        →</a>
+                </div>
+                <div class="card stagger-item hover-shadow">
+                    <div class="mb-4 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80"
+                            alt="Medieval Art" class="w-full h-64 object-cover">
+                    </div>
+                    <h3 class="text-2xl mb-2"
+                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Medieval Art &
+                        Culture</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Explore the artistic and cultural
+                        achievements of the medieval period.</p>
+                    <a href="exhibition-details.html" class="hover-underline" style="color: var(--accent);">Learn More
+                        →</a>
+                </div>
+                <div class="card stagger-item hover-shadow">
+                    <div class="mb-4 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80"
+                            alt="Modern History" class="w-full h-64 object-cover">
+                    </div>
+                    <h3 class="text-2xl mb-2"
+                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Modern History</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Discover the events and movements that
+                        shaped the modern world.</p>
+                    <a href="exhibition-details.html" class="hover-underline" style="color: var(--accent);">Learn More
+                        →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-[var(--bg-surface)]">
+        <div class="container-custom mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center section-reveal">
+                <div>
+                    <h2 class="text-4xl mb-6"
+                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">About The Heritage
+                        Museum</h2>
+                    <p class="mb-4" style="color: var(--text-secondary);">The Heritage Museum is dedicated to preserving
+                        and showcasing the rich history of our world and region. Our mission is to educate, inspire, and
+                        connect visitors with the past through carefully curated exhibitions and collections.</p>
+                    <p class="mb-6" style="color: var(--text-secondary);">We welcome students, researchers, tourists,
+                        and families to explore our extensive collection of artifacts, manuscripts, and historical
+                        documents.</p>
+                    <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80"
+                        alt="Museum Interior" class="w-full h-96 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="py-20 bg-[var(--bg-primary)]">
+        <div class="container-custom mx-auto px-4">
+            <div class="text-center mb-12 section-reveal">
+                <h2 class="text-4xl mb-4" style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">
+                    Upcoming Events</h2>
+                <p class="text-lg" style="color: var(--text-secondary);">Join us for lectures, workshops, and special
+                    events</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card stagger-item">
+                    <div class="text-sm mb-2" style="color: var(--accent);">January 15, 2024</div>
+                    <h3 class="text-xl mb-2"
+                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Historical Lecture
+                        Series</h3>
+                    <p style="color: var(--text-secondary);">Join us for an evening of historical insights and
+                        discussion.</p>
+                </div>
+                <div class="card stagger-item">
+                    <div class="text-sm mb-2" style="color: var(--accent);">January 22, 2024</div>
+                    <h3 class="text-xl mb-2"
+                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Family Workshop
+                    </h3>
+                    <p style="color: var(--text-secondary);">Hands-on activities for families to explore history
+                        together.</p>
+                </div>
+                <div class="card stagger-item">
+                    <div class="text-sm mb-2" style="color: var(--accent);">February 1, 2024</div>
+                    <h3 class="text-xl mb-2"
+                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Curator's Tour</h3>
+                    <p style="color: var(--text-secondary);">Exclusive guided tour with our head curator.</p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="events.html" class="btn btn-outline">View All Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--bg-surface)] border-t border-[var(--border)] py-12">
+        <div class="container-custom mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1: Museum Description -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-[var(--accent)] rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">H</span>
+                        </div>
+                        <span class="text-xl font-bold"
+                            style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">The Heritage
+                            Museum</span>
+                    </div>
+                    <p class="mb-4" style="color: var(--text-secondary);">Preserving and showcasing world and regional
+                        history through curated exhibitions and collections.</p>
+                    <p class="text-sm" style="color: var(--text-secondary);">© 2024 The Heritage Museum. All rights
+                        reserved.</p>
+                </div>
+
+                <!-- Column 2: Explore -->
+                <div>
+                    <h4 class="text-lg mb-4 font-semibold"
+                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Explore</h4>
+                    <ul class="space-y-2">
+                        <li><a href="exhibitions.html" class="hover-underline"
+                                style="color: var(--text-secondary);">Exhibitions</a></li>
+                        <li><a href="events.html" class="hover-underline"
+                                style="color: var(--text-secondary);">Events</a></li>
+                        <li><a href="blog.html" class="hover-underline" style="color: var(--text-secondary);">Blog</a>
+                        </li>
+                        <li><a href="about.html" class="hover-underline" style="color: var(--text-secondary);">About
+                                Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Visitor Info -->
+                <div>
+                    <h4 class="text-lg mb-4 font-semibold"
+                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Visitor Info</h4>
+                    <ul class="space-y-2">
+                        <li><a href="visit.html" class="hover-underline" style="color: var(--text-secondary);">Hours &
+                                Tickets</a></li>
+                        <li><a href="visit.html" class="hover-underline" style="color: var(--text-secondary);">Getting
+                                Here</a></li>
+                        <li><a href="visit.html" class="hover-underline"
+                                style="color: var(--text-secondary);">Accessibility</a></li>
+                        <li><a href="visit.html" class="hover-underline" style="color: var(--text-secondary);">Group
+                                Visits</a></li>
+                        <li><a href="visit.html" class="hover-underline"
+                                style="color: var(--text-secondary);">Facilities</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact & Social -->
+                <div>
+                    <h4 class="text-lg mb-4 font-semibold"
+                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Contact</h4>
+                    <ul class="space-y-2 mb-4" style="color: var(--text-secondary);">
+                        <li>123 Heritage Street</li>
+                        <li>History City, HC 12345</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Email: info@heritagemuseum.org</li>
+                    </ul>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover-underline" style="color: var(--accent);" aria-label="Facebook">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="hover-underline" style="color: var(--accent);" aria-label="Twitter">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="hover-underline" style="color: var(--accent);" aria-label="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.217.562-.478.96-.897 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.217-.96-.478-1.379-.897-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.057-1.137-.07-1.49-.07-4.844 0-3.36.013-3.707.074-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.057 1.65-.07 4.859-.07zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script>
+        // Mobile theme toggle
+        const mobileThemeToggle = document.getElementById('theme-toggle-mobile');
+        const desktopThemeToggle = document.getElementById('theme-toggle');
+        if (mobileThemeToggle) {
+            mobileThemeToggle.addEventListener('click', function () {
+                if (desktopThemeToggle) desktopThemeToggle.click();
+            });
+        }
+    </script>
+</body>
+
+</html>

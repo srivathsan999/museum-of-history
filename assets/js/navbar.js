@@ -1,5 +1,5 @@
 // Navbar Functionality
-(function() {
+(function () {
   'use strict';
 
   // Mobile menu toggle
@@ -8,7 +8,7 @@
   const navLinks = document.querySelectorAll('.nav-link');
 
   if (mobileMenuToggle && mobileMenu) {
-    mobileMenuToggle.addEventListener('click', function() {
+    mobileMenuToggle.addEventListener('click', function () {
       mobileMenu.classList.toggle('hidden');
       const icon = mobileMenuToggle.querySelector('svg');
       if (icon) {
@@ -19,7 +19,7 @@
 
   // Close mobile menu when clicking a link
   navLinks.forEach(link => {
-    link.addEventListener('click', function() {
+    link.addEventListener('click', function () {
       if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.add('hidden');
       }
@@ -31,16 +31,27 @@
   const dropdownMenu = document.getElementById('dropdown-menu');
 
   if (dropdownToggle && dropdownMenu) {
-    dropdownToggle.addEventListener('click', function(e) {
+    dropdownToggle.addEventListener('click', function (e) {
       e.stopPropagation();
       dropdownMenu.classList.toggle('hidden');
     });
 
     // Close dropdown when clicking outside
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
       if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
         dropdownMenu.classList.add('hidden');
       }
+    });
+  }
+
+  // Mobile Home dropdown functionality
+  const mobileHomeDropdownToggle = document.getElementById('mobile-home-dropdown-toggle');
+  const mobileHomeDropdown = document.getElementById('mobile-home-dropdown');
+
+  if (mobileHomeDropdownToggle && mobileHomeDropdown) {
+    mobileHomeDropdownToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      mobileHomeDropdown.classList.toggle('hidden');
     });
   }
 
@@ -49,15 +60,15 @@
   let lastScroll = 0;
 
   if (navbar) {
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
       const currentScroll = window.pageYOffset;
-      
+
       if (currentScroll > 100) {
         navbar.classList.add('shadow-md');
       } else {
         navbar.classList.remove('shadow-md');
       }
-      
+
       lastScroll = currentScroll;
     });
   }

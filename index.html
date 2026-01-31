@@ -171,10 +171,11 @@
                 regional
                 history through our curated exhibitions</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="exhibitions.html" class="btn btn-primary inline-block">Explore Exhibitions</a>
+                <a href="exhibitions.html"
+                    class="btn btn-primary inline-block hover:scale-105 transition-transform duration-300">Explore
+                    Exhibitions</a>
                 <a href="visit.html"
-                    class="btn btn-outline inline-block border-white hover:bg-white hover:text-gray-900"
-                    style="color: white; border-color: white;">Plan
+                    class="btn btn-outline inline-block !text-white !border-white hover:!bg-white hover:!text-gray-900 hover:scale-105 transition-all duration-300">Plan
                     Your Visit</a>
             </div>
         </div>
@@ -190,7 +191,7 @@
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card stagger-item hover-shadow">
+                <div class="card stagger-item hover-shadow flex flex-col h-full">
                     <div class="mb-4 overflow-hidden rounded-lg">
                         <img src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80"
                             alt="Ancient Civilizations" class="w-full h-64 object-cover">
@@ -198,12 +199,16 @@
                     <h3 class="text-2xl mb-2"
                         style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Ancient
                         Civilizations</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Journey through the ancient world and
+                    <p class="flex-grow" style="color: var(--text-secondary); margin-bottom: 1rem;">Journey through the
+                        ancient world and
                         discover the foundations of human civilization.</p>
-                    <a href="exhibition-details.html" class="hover-underline" style="color: var(--accent);">Learn More
-                        →</a>
+                    <div class="mt-auto">
+                        <a href="exhibition-details.html" class="hover-underline" style="color: var(--accent);">Learn
+                            More
+                            →</a>
+                    </div>
                 </div>
-                <div class="card stagger-item hover-shadow">
+                <div class="card stagger-item hover-shadow flex flex-col h-full">
                     <div class="mb-4 overflow-hidden rounded-lg">
                         <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&q=80"
                             alt="Medieval Art" class="w-full h-64 object-cover">
@@ -211,22 +216,30 @@
                     <h3 class="text-2xl mb-2"
                         style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Medieval Art &
                         Culture</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Explore the artistic and cultural
+                    <p class="flex-grow" style="color: var(--text-secondary); margin-bottom: 1rem;">Explore the artistic
+                        and cultural
                         achievements of the medieval period.</p>
-                    <a href="exhibition-details.html" class="hover-underline" style="color: var(--accent);">Learn More
-                        →</a>
+                    <div class="mt-auto">
+                        <a href="exhibition-details.html" class="hover-underline" style="color: var(--accent);">Learn
+                            More
+                            →</a>
+                    </div>
                 </div>
-                <div class="card stagger-item hover-shadow">
+                <div class="card stagger-item hover-shadow flex flex-col h-full">
                     <div class="mb-4 overflow-hidden rounded-lg">
                         <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?w=800&q=80"
                             alt="Modern History" class="w-full h-64 object-cover">
                     </div>
                     <h3 class="text-2xl mb-2"
                         style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Modern History</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Discover the events and movements that
+                    <p class="flex-grow" style="color: var(--text-secondary); margin-bottom: 1rem;">Discover the events
+                        and movements that
                         shaped the modern world.</p>
-                    <a href="exhibition-details.html" class="hover-underline" style="color: var(--accent);">Learn More
-                        →</a>
+                    <div class="mt-auto">
+                        <a href="exhibition-details.html" class="hover-underline" style="color: var(--accent);">Learn
+                            More
+                            →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -236,7 +249,7 @@
     <section class="py-20 bg-[var(--bg-surface)]">
         <div class="container-custom mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center section-reveal">
-                <div>
+                <div class="text-center lg:text-left">
                     <h2 class="text-4xl mb-6"
                         style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">About The Heritage
                         Museum</h2>
@@ -246,11 +259,41 @@
                     <p class="mb-6" style="color: var(--text-secondary);">We welcome students, researchers, tourists,
                         and families to explore our extensive collection of artifacts, manuscripts, and historical
                         documents.</p>
-                    <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+                    <div class="text-center">
+                        <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+                    </div>
                 </div>
                 <div class="overflow-hidden rounded-lg">
                     <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800&q=80"
                         alt="Museum Interior" class="w-full h-96 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-[var(--accent)] text-white">
+        <div class="container-custom mx-auto px-4">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="stagger-item">
+                    <div class="text-4xl md:text-5xl font-bold mb-2" style="font-family: 'Libre Baskerville', serif;">
+                        50k+</div>
+                    <p class="text-white/80 uppercase tracking-widest text-sm font-semibold">Artifacts</p>
+                </div>
+                <div class="stagger-item">
+                    <div class="text-4xl md:text-5xl font-bold mb-2" style="font-family: 'Libre Baskerville', serif;">
+                        120k</div>
+                    <p class="text-white/80 uppercase tracking-widest text-sm font-semibold">Annual Visitors</p>
+                </div>
+                <div class="stagger-item">
+                    <div class="text-4xl md:text-5xl font-bold mb-2" style="font-family: 'Libre Baskerville', serif;">
+                        25+</div>
+                    <p class="text-white/80 uppercase tracking-widest text-sm font-semibold">Curated Galleries</p>
+                </div>
+                <div class="stagger-item">
+                    <div class="text-4xl md:text-5xl font-bold mb-2" style="font-family: 'Libre Baskerville', serif;">
+                        150</div>
+                    <p class="text-white/80 uppercase tracking-widest text-sm font-semibold">Years of History</p>
                 </div>
             </div>
         </div>
@@ -295,6 +338,35 @@
         </div>
     </section>
 
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-[var(--bg-surface)]">
+        <div class="container-custom mx-auto px-4">
+            <div
+                class="max-w-4xl mx-auto bg-[var(--bg-primary)] rounded-3xl p-8 md:p-12 shadow-xl border border-[var(--border)] relative overflow-hidden section-reveal">
+                <!-- Background Decoration -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-[var(--accent)] opacity-5 rounded-bl-full"></div>
+
+                <div class="relative z-10 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4"
+                        style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Stay Connected with
+                        History</h2>
+                    <p class="text-lg mb-8 max-w-2xl mx-auto" style="color: var(--text-secondary);">Subscribe to our
+                        monthly newsletter for exclusive exhibition previews, historical insights, and upcoming event
+                        notifications.</p>
+
+                    <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                        <input type="email" placeholder="Your email address" required
+                            class="flex-1 px-6 py-3 rounded-xl border border-[var(--border)] focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all outline-none"
+                            style="background: var(--bg-surface); color: var(--text-primary);">
+                        <button type="submit" class="btn btn-primary whitespace-nowrap px-8">Subscribe Now</button>
+                    </form>
+                    <p class="mt-4 text-sm" style="color: var(--text-secondary);">Join 10,000+ history enthusiasts.
+                        Unsubscribe at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-[var(--bg-surface)] border-t border-[var(--border)] py-12">
         <div class="container-custom mx-auto px-4">
@@ -302,12 +374,13 @@
                 <!-- Column 1: Museum Description -->
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-[var(--accent)] rounded-lg flex items-center justify-center">
+                        <div
+                            class="w-10 h-10 bg-[var(--accent)] rounded-lg flex items-center justify-center flex-shrink-0">
                             <span class="text-white font-bold text-xl">H</span>
                         </div>
                         <span class="text-xl font-bold"
-                            style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">The Heritage
-                            Museum</span>
+                            style="font-family: 'Libre Baskerville', serif; color: var(--text-primary); white-space: nowrap;">The
+                            Heritage Museum</span>
                     </div>
                     <p class="mb-4" style="color: var(--text-secondary);">Preserving and showcasing world and regional
                         history through curated exhibitions and collections.</p>
@@ -316,7 +389,7 @@
                 </div>
 
                 <!-- Column 2: Explore -->
-                <div>
+                <div class="lg:pl-12">
                     <h4 class="text-lg mb-4 font-semibold"
                         style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Explore</h4>
                     <ul class="space-y-2">
@@ -332,7 +405,7 @@
                 </div>
 
                 <!-- Column 3: Visitor Info -->
-                <div>
+                <div class="lg:pl-12">
                     <h4 class="text-lg mb-4 font-semibold"
                         style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Visitor Info</h4>
                     <ul class="space-y-2">
@@ -350,7 +423,7 @@
                 </div>
 
                 <!-- Column 4: Contact & Social -->
-                <div>
+                <div class="lg:pl-12">
                     <h4 class="text-lg mb-4 font-semibold"
                         style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Contact</h4>
                     <ul class="space-y-2 mb-4" style="color: var(--text-secondary);">

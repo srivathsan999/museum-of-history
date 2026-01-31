@@ -62,6 +62,57 @@ const blogData = {
             
             <p class="mb-4">Studying these manuscripts reveals not only the texts they contain but also information about medieval society, from the materials and techniques used in their creation to the subjects deemed worthy of such elaborate treatment.</p>
         `
+    },
+    industrial: {
+        title: "Steam & Steel: The Pulse of Industrial Revolution",
+        date: "December 15, 2025",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80",
+        content: `
+            <p class="lead mb-6" style="font-size: 1.25rem; line-height: 1.75;">The Industrial Revolution was more than just a period of mechanical innovation; it was a total reconfiguration of human life, shifting the world from the rhythm of the seasons to the relentless beat of the machine.</p>
+            
+            <h2 class="text-3xl mb-4 mt-8" style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">From Hand-Crafted to Machine-Made</h2>
+            <p class="mb-4">For centuries, production was limited by human and animal strength. The advent of the steam engine changed everything. Factories rose like titans across the landscape, centralizing labor and enabling mass production on a scale previously unimaginable.</p>
+            
+            <h2 class="text-3xl mb-4 mt-8" style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Social Transformation</h2>
+            <p class="mb-4">This era saw the birth of the modern city. As workers migrated from rural farms to urban centers in search of factory work, the social fabric of society was forever altered. While it brought economic growth, it also introduced new challenges regarding labor rights, living conditions, and environmental impact.</p>
+            
+            <h2 class="text-3xl mb-4 mt-8" style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Engineering Legends</h2>
+            <p class="mb-4">Names like James Watt, Isambard Kingdom Brunel, and George Stephenson became synonymous with progress. Their innovations in steam power, bridge building, and locomotive transport laid the physical foundation for the interconnected world we live in today.</p>
+        `
+    },
+    renaissance: {
+        title: "The Renaissance: Nature, Art, and Rebirth",
+        date: "December 5, 2025",
+        image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200&q=80",
+        content: `
+            <p class="lead mb-6" style="font-size: 1.25rem; line-height: 1.75;">The Renaissance was a fervent period of European cultural, artistic, political, and economic "rebirth" following the Middle Ages. It marked the transition from the ancient world to modernity.</p>
+            
+            <h2 class="text-3xl mb-4 mt-8" style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Humanism and the Individual</h2>
+            <p class="mb-4">At the heart of the Renaissance was the philosophy of humanism. Intellectuals looked back to Classical Greek and Roman texts, emphasizing human potential and achievement. This shift was reflected in art, which began to focus on realistic anatomy, perspective, and genuine human emotion.</p>
+            
+            <h2 class="text-3xl mb-4 mt-8" style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">The masters of Florence</h2>
+            <p class="mb-4">Italy, and particularly Florence, became the epicenter of this creative explosion. Figures like Leonardo da Vinci, Michelangelo, and Raphael redefined what was possible with a brush and chisel. Their works—from the 'Mona Lisa' to the Sistine Chapel—remain the gold standard of artistic technique and beauty.</p>
+            
+            <h2 class="text-3xl mb-4 mt-8" style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Scientific Awakening</h2>
+            <p class="mb-4">The Renaissance also ignited a curiosity about the natural world. This era saw the beginnings of modern science, with pioneers like Copernicus and Galileo challenging the geocentric view of the universe and laying the groundwork for the Scientific Revolution.</p>
+        `
+    },
+    digital: {
+        title: "Digital Archaeology: Reconstructing Lost Worlds",
+        date: "November 20, 2025",
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80",
+        content: `
+            <p class="lead mb-6" style="font-size: 1.25rem; line-height: 1.75;">Archaeology is entering a new era. While the shovel and brush remain iconic, today's archaeologists are just as likely to be found using laser scanners, drones, and artificial intelligence to uncover the past.</p>
+            
+            <h2 class="text-3xl mb-4 mt-8" style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Seeing Through the Soil</h2>
+            <p class="mb-4">LiDAR (Light Detection and Ranging) has revolutionized how we find ancient sites. By firing laser pulses from aircraft, researchers can "see through" dense jungle canopies to reveal hidden pyramids and vast, lost urban networks that were previously invisible to the naked eye.</p>
+            
+            <h2 class="text-3xl mb-4 mt-8" style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">Reconstructing History in 3D</h2>
+            <p class="mb-4">Photogrammetry and 3D modeling allow us to preserve fragile sites digitally before they are lost to time or erosion. We can now create walk-through virtual reality experiences of ancient temples, allowing people across the globe to explore history in immersive detail.</p>
+            
+            <h2 class="text-3xl mb-4 mt-8" style="font-family: 'Libre Baskerville', serif; color: var(--text-primary);">The AI Revolution in Translation</h2>
+            <p class="mb-4">Artificial Intelligence is now being used to decipher ancient scripts that have baffled scholars for centuries. By analyzing thousands of fragments, AI can identify patterns and suggest translations, speeding up our understanding of lost languages and forgotten stories.</p>
+        `
     }
 };
 
